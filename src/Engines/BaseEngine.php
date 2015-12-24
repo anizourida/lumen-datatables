@@ -1,13 +1,13 @@
 <?php
 
-namespace Yajra\Datatables\Engines;
+namespace Hotfix\Datatables\Engines;
 
 /*
  * Laravel Datatables Base Engine
  *
  * @package  Laravel
  * @category Package
- * @author   Arjay Angeles <aqangeles@gmail.com>
+ * @author   Frédéric Le Barzic <fred@lebarzic.fr>
  */
 
 use Illuminate\Http\JsonResponse;
@@ -16,16 +16,16 @@ use Illuminate\Support\Str;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Serializer\DataArraySerializer;
-use Yajra\Datatables\Contracts\DataTableEngineContract;
-use Yajra\Datatables\Helper;
-use Yajra\Datatables\Processors\DataProcessor;
+use Hotfix\Datatables\Contracts\DataTableEngineContract;
+use Hotfix\Datatables\Helper;
+use Hotfix\Datatables\Processors\DataProcessor;
 
 abstract class BaseEngine implements DataTableEngineContract
 {
     /**
      * Datatables Request object.
      *
-     * @var \Yajra\Datatables\Request
+     * @var \Hotfix\Datatables\Request
      */
     public $request;
 

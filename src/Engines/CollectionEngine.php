@@ -1,13 +1,13 @@
 <?php
 
-namespace Yajra\Datatables\Engines;
+namespace Hotfix\Datatables\Engines;
 
 /**
  * Laravel Datatables Collection Engine
  *
  * @package  Laravel
  * @category Package
- * @author   Arjay Angeles <aqangeles@gmail.com>
+ * @author   Frédéric Le Barzic <fred@lebarzic.fr>
  */
 
 use Closure;
@@ -15,9 +15,9 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Yajra\Datatables\Contracts\DataTableEngineContract;
-use Yajra\Datatables\Request;
-use Yajra\Datatables\Helper;
+use Hotfix\Datatables\Contracts\DataTableEngineContract;
+use Hotfix\Datatables\Request;
+use Hotfix\Datatables\Helper;
 
 class CollectionEngine extends BaseEngine implements DataTableEngineContract
 {
@@ -37,7 +37,7 @@ class CollectionEngine extends BaseEngine implements DataTableEngineContract
 
     /**
      * @param Collection $collection
-     * @param \Yajra\Datatables\Request $request
+     * @param \Hotfix\Datatables\Request $request
      */
     public function __construct(Collection $collection, Request $request)
     {

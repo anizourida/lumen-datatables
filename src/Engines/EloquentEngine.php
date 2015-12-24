@@ -1,24 +1,24 @@
 <?php
 
-namespace Yajra\Datatables\Engines;
+namespace Hotfix\Datatables\Engines;
 
 /**
  * Laravel Datatables Eloquent Engine
  *
  * @package  Laravel
  * @category Package
- * @author   Arjay Angeles <aqangeles@gmail.com>
+ * @author   Frédéric Le Barzic <fred@lebarzic.fr>
  */
 
 use Illuminate\Database\Eloquent\Builder;
-use Yajra\Datatables\Contracts\DataTableEngineContract;
-use Yajra\Datatables\Request;
+use Hotfix\Datatables\Contracts\DataTableEngineContract;
+use Hotfix\Datatables\Request;
 
 class EloquentEngine extends QueryBuilderEngine implements DataTableEngineContract
 {
     /**
      * @param mixed $model
-     * @param \Yajra\Datatables\Request $request
+     * @param \Hotfix\Datatables\Request $request
      */
     public function __construct($model, Request $request)
     {

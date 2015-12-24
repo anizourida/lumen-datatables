@@ -1,17 +1,17 @@
 <?php
 
-namespace Yajra\Datatables\Services;
+namespace Hotfix\Datatables\Services;
 
 use Illuminate\Contracts\View\Factory;
-use Yajra\Datatables\Contracts\DataTableButtonsContract;
-use Yajra\Datatables\Contracts\DataTableContract;
-use Yajra\Datatables\Contracts\DataTableScopeContract;
-use Yajra\Datatables\Datatables;
+use Hotfix\Datatables\Contracts\DataTableButtonsContract;
+use Hotfix\Datatables\Contracts\DataTableContract;
+use Hotfix\Datatables\Contracts\DataTableScopeContract;
+use Hotfix\Datatables\Datatables;
 
 abstract class DataTable implements DataTableContract, DataTableButtonsContract
 {
     /**
-     * @var \Yajra\Datatables\Datatables
+     * @var \Hotfix\Datatables\Datatables
      */
     protected $datatables;
 
@@ -49,7 +49,7 @@ abstract class DataTable implements DataTableContract, DataTableButtonsContract
     protected $scopes = [];
 
     /**
-     * @param \Yajra\Datatables\Datatables $datatables
+     * @param \Hotfix\Datatables\Datatables $datatables
      * @param \Illuminate\Contracts\View\Factory $viewFactory
      */
     public function __construct(Datatables $datatables, Factory $viewFactory)
@@ -221,7 +221,7 @@ abstract class DataTable implements DataTableContract, DataTableButtonsContract
     /**
      * Get Datatables Html Builder instance.
      *
-     * @return \Yajra\Datatables\Html\Builder
+     * @return \Hotfix\Datatables\Html\Builder
      */
     public function builder()
     {
@@ -231,7 +231,7 @@ abstract class DataTable implements DataTableContract, DataTableButtonsContract
     /**
      * Get Datatables Request instance.
      *
-     * @return \Yajra\Datatables\Request
+     * @return \Hotfix\Datatables\Request
      */
     public function request()
     {
@@ -241,7 +241,7 @@ abstract class DataTable implements DataTableContract, DataTableButtonsContract
     /**
      * Add basic array query scopes.
      *
-     * @param \Yajra\Datatables\Contracts\DataTableScopeContract $scope
+     * @param \Hotfix\Datatables\Contracts\DataTableScopeContract $scope
      * @return $this
      */
     public function addScope(DataTableScopeContract $scope)

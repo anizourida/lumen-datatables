@@ -1,14 +1,14 @@
 <?php
 
-namespace Yajra\Datatables\Processors;
+namespace Hotfix\Datatables\Processors;
 
 use Illuminate\Support\Arr;
-use Yajra\Datatables\Helper;
+use Hotfix\Datatables\Helper;
 
 /**
  * Class RowProcessor
  *
- * @package Yajra\Datatables
+ * @package Hotfix\Datatables
  */
 class RowProcessor
 {

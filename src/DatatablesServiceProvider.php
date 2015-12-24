@@ -1,12 +1,12 @@
 <?php
 
-namespace Yajra\Datatables;
+namespace Hotfix\Datatables;
 
 use Collective\Html\HtmlServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Maatwebsite\Excel\ExcelServiceProvider;
-use Yajra\Datatables\Generators\DataTablesMakeCommand;
-use Yajra\Datatables\Generators\DataTablesScopeCommand;
+use Hotfix\Datatables\Generators\DataTablesMakeCommand;
+use Hotfix\Datatables\Generators\DataTablesScopeCommand;
 
 class DatatablesServiceProvider extends ServiceProvider
 {
@@ -36,26 +36,8 @@ class DatatablesServiceProvider extends ServiceProvider
      */
     private function publishAssets()
     {
-        $this->publishes([
-            __DIR__ . '/config/config.php' => config_path('datatables.php'),
-        ], 'datatables');
-
-        $this->publishes([
-            __DIR__ . '/resources/assets/buttons.server-side.js' => public_path('vendor/datatables/buttons.server-side.js'),
-        ], 'datatables');
-
-        $this->publishes([
-            __DIR__ . '/resources/views' => base_path('/resources/views/vendor/datatables'),
-        ], 'datatables');
-    }
-
-    /**
-     * Register datatables commands.
-     */
-    private function registerCommands()
-    {
-        $this->commands(DataTablesMakeCommand::class);
-        $this->commands(DataTablesScopeCommand::class);
+	    app()->make('config')->set('datatables', require __DIR__ . '/config/config.php');
+	    app()->configure('datatables');
     }
 
     /**
@@ -65,8 +47,6 @@ class DatatablesServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerRequiredProviders();
-
         $this->app->singleton('datatables', function ($app) {
             return new Datatables($app->make(Request::class));
         });
@@ -75,21 +55,12 @@ class DatatablesServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register 3rd party providers.
-     */
-    private function registerRequiredProviders()
-    {
-        $this->app->register(HtmlServiceProvider::class);
-        $this->app->register(ExcelServiceProvider::class);
-    }
-
-    /**
      * Create aliases for the dependency.
      */
     private function registerAliases()
     {
         $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('Datatables', \Yajra\Datatables\Datatables::class);
+        $loader->alias('Datatables', \Hotfix\Datatables\Datatables::class);
     }
 
     /**

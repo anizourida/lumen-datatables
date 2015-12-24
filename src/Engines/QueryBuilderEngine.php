@@ -1,27 +1,27 @@
 <?php
 
-namespace Yajra\Datatables\Engines;
+namespace Hotfix\Datatables\Engines;
 
 /**
  * Laravel Datatables Query Builder Engine
  *
  * @package  Laravel
  * @category Package
- * @author   Arjay Angeles <aqangeles@gmail.com>
+ * @author   Frédéric Le Barzic <fred@lebarzic.fr>
  */
 
 use Closure;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Str;
-use Yajra\Datatables\Contracts\DataTableEngineContract;
-use Yajra\Datatables\Helper;
-use Yajra\Datatables\Request;
+use Hotfix\Datatables\Contracts\DataTableEngineContract;
+use Hotfix\Datatables\Helper;
+use Hotfix\Datatables\Request;
 
 class QueryBuilderEngine extends BaseEngine implements DataTableEngineContract
 {
     /**
      * @param \Illuminate\Database\Query\Builder $builder
-     * @param \Yajra\Datatables\Request $request
+     * @param \Hotfix\Datatables\Request $request
      */
     public function __construct(Builder $builder, Request $request)
     {
@@ -32,7 +32,7 @@ class QueryBuilderEngine extends BaseEngine implements DataTableEngineContract
     /**
      * Initialize attributes.
      *
-     * @param  \Yajra\Datatables\Request $request
+     * @param  \Hotfix\Datatables\Request $request
      * @param  \Illuminate\Database\Query\Builder $builder
      * @param  string $type
      */

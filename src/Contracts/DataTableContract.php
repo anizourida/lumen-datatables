@@ -1,6 +1,6 @@
 <?php
 
-namespace Yajra\Datatables\Contracts;
+namespace Hotfix\Datatables\Contracts;
 
 interface DataTableContract
 {
@@ -20,17 +20,17 @@ interface DataTableContract
     public function ajax();
 
     /**
-     * @return \Yajra\Datatables\Html\Builder
+     * @return \Hotfix\Datatables\Html\Builder
      */
     public function html();
 
     /**
-     * @return \Yajra\Datatables\Html\Builder
+     * @return \Hotfix\Datatables\Html\Builder
      */
     public function builder();
 
     /**
-     * @return \Yajra\Datatables\Request
+     * @return \Hotfix\Datatables\Request
      */
     public function request();
 

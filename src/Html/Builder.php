@@ -1,6 +1,6 @@
 <?php
 
-namespace Yajra\Datatables\Html;
+namespace Hotfix\Datatables\Html;
 
 use Collective\Html\FormBuilder;
 use Collective\Html\HtmlBuilder;
@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 /**
  * Class Builder
  *
- * @package Yajra\Datatables\Html
+ * @package Hotfix\Datatables\Html
  */
 class Builder
 {
@@ -180,7 +180,7 @@ class Builder
     /**
      * Add a Column object in collection.
      *
-     * @param \Yajra\Datatables\Html\Column $column
+     * @param \Hotfix\Datatables\Html\Column $column
      * @return $this
      */
     public function add(Column $column)

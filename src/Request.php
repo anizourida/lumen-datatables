@@ -1,6 +1,6 @@
 <?php
 
-namespace Yajra\Datatables;
+namespace Hotfix\Datatables;
 
 use Exception;
 use Illuminate\Http\Request as IlluminateRequest;

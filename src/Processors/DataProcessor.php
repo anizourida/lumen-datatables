@@ -1,13 +1,13 @@
 <?php
 
-namespace Yajra\Datatables\Processors;
+namespace Hotfix\Datatables\Processors;
 
-use Yajra\Datatables\Helper;
+use Hotfix\Datatables\Helper;
 
 /**
  * Class DataProcessor
  *
- * @package Yajra\Datatables
+ * @package Hotfix\Datatables
  */
 class DataProcessor
 {

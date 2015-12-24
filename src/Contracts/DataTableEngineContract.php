@@ -1,6 +1,6 @@
 <?php
 
-namespace Yajra\Datatables\Contracts;
+namespace Hotfix\Datatables\Contracts;
 
 interface DataTableEngineContract
 {

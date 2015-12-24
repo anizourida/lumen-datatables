@@ -3,8 +3,8 @@
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\Config;
 use Mockery as m;
-use Yajra\Datatables\Datatables;
-use Yajra\Datatables\Request;
+use Hotfix\Datatables\Datatables;
+use Hotfix\Datatables\Request;
 
 require_once 'helper.php';
 
