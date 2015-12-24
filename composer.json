@@ -1,6 +1,6 @@
 {
     "name": "hotfix/lumen-datatables",
-    "description": "jQuery DataTables API for Laravel 4|5",
+    "description": "jQuery DataTables API for Lumen 5",
     "keywords" : ["lumen5","laravel5","laravel","datatables","datatable","datatables jquery plugin"],
     "license": "MIT",
     "authors": [

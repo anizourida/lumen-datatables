@@ -6,7 +6,7 @@ Librement inspiré de [Datatables Package for Laravel 4|5](https://github.com/ya
 
 1. Télécharger le service via composer (ou autre) 
 ```
-$ composer require hotfix\lumen-datatable
+$ composer require hotfix/lumen-datatable
 ```
 
 2. Télécharger le js de [DataTable](https://datatables.net/download/index) via bower (ou autre)
