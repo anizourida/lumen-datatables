@@ -27,8 +27,6 @@ class DatatablesServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'datatables');
 
         $this->publishAssets();
-
-        $this->registerCommands();
     }
 
     /**
@@ -51,7 +49,7 @@ class DatatablesServiceProvider extends ServiceProvider
             return new Datatables($app->make(Request::class));
         });
 
-        $this->registerAliases();
+        //$this->registerAliases();
     }
 
     /**
